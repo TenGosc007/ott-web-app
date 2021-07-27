@@ -13,37 +13,45 @@ export interface Movie {
 interface State {
   moviesData: Movie[];
   currentMovieUrl: string;
+  loading: boolean;
 }
 
 const initialState: State = {
   moviesData: [],
   currentMovieUrl: "",
+  loading: false,
 };
 
 const moviesSlice = createSlice({
   name: "movies",
   initialState,
   reducers: {
+    startLoading: (state) => {
+      state.loading = true;
+    },
     setMovies: (state, action) => {
       state.moviesData = action.payload;
+      state.loading = false;
     },
 
     setCurrentMovie: (state, action) => {
       state.currentMovieUrl = action.payload;
+      state.loading = false;
     },
   },
 });
 
-export const { setMovies, setCurrentMovie } = moviesSlice.actions;
+export const { setMovies, setCurrentMovie, startLoading } = moviesSlice.actions;
 
 export const getMovies =
-  (mediaId: number): AppThunk =>
+  (listId: number): AppThunk =>
   async (dispatch) => {
+    dispatch(startLoading());
     try {
       const { data } = await axios.post(
         "/Media/GetMediaList",
         {
-          MediaListId: mediaId,
+          MediaListId: listId,
           IncludeCategories: false,
           IncludeImages: true,
           IncludeMedia: false,
@@ -81,6 +89,7 @@ export const getMovies =
 export const getMovieUrl =
   (movieId: number): AppThunk =>
   async (dispatch) => {
+    dispatch(startLoading());
     try {
       const { data } = await axios.post(
         "/Media/GetMediaPlayInfo",

@@ -12,17 +12,19 @@ const Header = () => {
 
   return (
     <header className="header">
-      <div className="header__logo">
-        <img className="header__img" src={imgLogo} alt="logo" />
-        <div className="header__title">OTT Player</div>
-      </div>
-
-      {auth && (
-        <div className="header__content">
-          <div className="header__user-info">{user && user.UserName}</div>
-          <Logout />
+      <div className="header__container">
+        <div className="header__logo">
+          <img className="header__img" src={imgLogo} alt="logo" />
+          <div className="header__title">OTT Player</div>
         </div>
-      )}
+
+        {auth && (
+          <div className="header__content">
+            <div className="header__user-info">{user && user.UserName}</div>
+            <Logout />
+          </div>
+        )}
+      </div>
     </header>
   );
 };

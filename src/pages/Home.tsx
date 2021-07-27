@@ -7,7 +7,8 @@ import MovieList from "components/MovieList";
 const Home = () => {
   return (
     <Layout>
-      <div>
+      <div className="home">
+        <MovieList listId={3} />
         <MovieList />
       </div>
     </Layout>

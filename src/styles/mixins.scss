@@ -21,3 +21,8 @@
     border-radius: $scrollRadius;
   }
 }
+
+@mixin containerWidth {
+  max-width: $break-tablet-landscape;
+  margin: auto;
+}

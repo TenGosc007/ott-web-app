@@ -1,11 +1,15 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import { getMovies, getMovieUrl, selectMovies, Movie } from "state/movies";
 
 import imgPlaceholder from "assets/movie-placeholder.png";
 
-const MovieList = () => {
+interface Props {
+  listId?: number;
+}
+
+const MovieList = ({ listId }: Props) => {
   const movies = useSelector(selectMovies);
   const dispatch = useDispatch();
 
@@ -14,7 +18,7 @@ const MovieList = () => {
   };
 
   useEffect(() => {
-    dispatch(getMovies(3));
+    dispatch(getMovies(listId ?? 2));
   }, [dispatch]);
 
   return (

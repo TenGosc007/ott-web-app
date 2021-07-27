@@ -1,6 +1,8 @@
 .layout {
   text-align: center;
   padding: $space-large;
+  max-width: 1500px;
+  margin: auto;
 
   @media (max-width: $break-mobile-portrait) {
     padding: $space-small;

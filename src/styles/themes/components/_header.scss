@@ -3,8 +3,13 @@
   color: $c-white;
   padding: $space-small $space-medium;
   box-shadow: 0 2px 10px rgba($c-mineShaft, 0.5);
-  display: flex;
-  justify-content: space-between;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1500px;
+    margin: auto;
+  }
 
   &__logo {
     display: flex;
