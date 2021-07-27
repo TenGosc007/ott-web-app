@@ -10,7 +10,7 @@ import { useDispatch } from "react-redux";
 import { authUser, logout } from "state/user";
 import { PrivateRoute } from "helpers/PrivateRoute";
 import Home from "pages/Home";
-import Login from "pages/Login";
+import Splash from "pages/Splash";
 import NotFound from "components/NotFound";
 
 function App() {
@@ -27,7 +27,7 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route component={Login} path="/login" />
+        <Route component={Splash} path="/login" />
         <PrivateRoute exact component={Home} path="/" />
 
         <Route exact path="/not-found" component={NotFound} />

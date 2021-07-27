@@ -1,20 +1,14 @@
 import React, { useEffect } from "react";
-import { Link, useHistory } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { useHistory } from "react-router-dom";
+import { useSelector } from "react-redux";
 
+import { selectAuth } from "state/user";
 import Layout from "components/Layout";
-import { loginUserFetch, selectAuth } from "state/user";
+import Login from "components/Login";
 
-type E = React.MouseEvent<HTMLAnchorElement, MouseEvent>;
-
-const Login = () => {
+const Splash = () => {
   const auth = useSelector(selectAuth);
-  const dispatch = useDispatch();
   const history = useHistory();
-
-  const handleClick = async (e: E) => {
-    dispatch(loginUserFetch({}));
-  };
 
   useEffect(() => {
     if (auth) {
@@ -28,12 +22,10 @@ const Login = () => {
         <h1 className="login__header">Welcome to OTT Player</h1>
         <p className="login__subtitle">Please log in to watch movies</p>
 
-        <Link to="/" className="login__btn" onClick={handleClick}>
-          Login
-        </Link>
+        <Login />
       </div>
     </Layout>
   );
 };
 
-export default Login;
+export default Splash;
