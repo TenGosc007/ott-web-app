@@ -1,6 +1,9 @@
 .home {
   display: flex;
   justify-content: space-evenly;
-  flex-wrap: wrap;
   gap: $space-standard;
+
+  @media (max-width: $break-tablet-landscape) {
+    flex-wrap: wrap;
+  }
 }

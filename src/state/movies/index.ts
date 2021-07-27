@@ -10,15 +10,20 @@ export interface Movie {
   description?: string;
 }
 
+export interface CurrentMovie {
+  url: string;
+  id: number;
+}
+
 interface State {
   moviesData: Movie[];
-  currentMovieUrl: string;
+  currentMovieUrl: CurrentMovie | null;
   loading: boolean;
 }
 
 const initialState: State = {
   moviesData: [],
-  currentMovieUrl: "",
+  currentMovieUrl: null,
   loading: false,
 };
 
@@ -104,12 +109,14 @@ export const getMovieUrl =
         }
       );
 
-      dispatch(setCurrentMovie(data.ContentUrl));
+      dispatch(setCurrentMovie({ url: data.ContentUrl, id: data.MediaId }));
     } catch (err) {
       console.log(err);
     }
   };
 
 export const selectMovies = (state: RootState) => state.movies.moviesData;
+export const selectLoading = (state: RootState) => state.movies.loading;
+export const selectCurrent = (state: RootState) => state.movies.currentMovieUrl;
 
 export default moviesSlice.reducer;

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import { getMovies, getMovieUrl, selectMovies, Movie } from "state/movies";
@@ -19,7 +19,7 @@ const MovieList = ({ listId }: Props) => {
 
   useEffect(() => {
     dispatch(getMovies(listId ?? 2));
-  }, [dispatch]);
+  }, [dispatch, listId]);
 
   return (
     <div className="movie-list">

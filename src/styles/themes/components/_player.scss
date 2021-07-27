@@ -1,0 +1,28 @@
+.player {
+  color: $c-mineShaft;
+  text-align: left;
+  max-width: 900px;
+
+  &__container {
+    background: url("../../../assets/movie-placeholder.png") no-repeat cover;
+    height: fit-content;
+  }
+
+  &__window {
+    height: auto !important;
+    max-width: 900px;
+  }
+
+  &__info {
+    margin: $space-small $space-standard;
+  }
+
+  &__title {
+    font-size: $space-large;
+    font-weight: 500;
+  }
+
+  &__description {
+    margin-top: $space-small;
+  }
+}

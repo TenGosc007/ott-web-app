@@ -8,8 +8,8 @@ const Home = () => {
   return (
     <Layout>
       <div className="home">
-        <MovieList listId={3} />
-        <MovieList />
+        <Player />
+        <MovieList listId={2} />
       </div>
     </Layout>
   );
