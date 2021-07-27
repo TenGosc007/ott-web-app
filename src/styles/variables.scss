@@ -3,15 +3,14 @@
 $c-black: #000;
 $c-white: #fff;
 
+$c-lochmara: #0570bb;
+
 // Breaks
 //==========================================================================
-$break-xs: 374px;
-$break-mobile: 767px;
-$break-mid: 991px;
-$break-standard: 1100px;
-$break-desktop: 1144px;
-$break-laptop: 1299px;
-$break-high: 1600px;
+$break-mobile-portrait: 576px;
+$break-mobile-landscape: 768px;
+$break-tablet-portrait: 992px;
+$break-tablet-landscape: 1200px;
 
 // Paddings, Margins
 //==========================================================================

@@ -1,30 +1,37 @@
-import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import React, { useEffect } from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
+import { useDispatch } from "react-redux";
 
+import { authUser, logout } from "state/user";
+import { PrivateRoute } from "helpers/PrivateRoute";
 import Home from "pages/Home";
 import Login from "pages/Login";
+import NotFound from "components/NotFound";
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (localStorage.getItem("token")) {
+      dispatch(authUser());
+    } else {
+      dispatch(logout());
+    }
+  }, [dispatch]);
+
   return (
     <Router>
-      <div>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/login">Login</Link>
-          </li>
-        </ul>
-      </div>
-
       <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route path="/login">
-          <Login />
-        </Route>
+        <Route component={Login} path="/login" />
+        <PrivateRoute exact component={Home} path="/" />
+
+        <Route exact path="/not-found" component={NotFound} />
+        <Route render={() => <Redirect to="/not-found" />} />
       </Switch>
     </Router>
   );

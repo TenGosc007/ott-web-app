@@ -1,11 +1,15 @@
 import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
 
-import counter from "./counter";
+import user from "./user";
+import movies from "./movies";
 
 const store = configureStore({
   reducer: {
-    counter,
+    user,
+    movies,
   },
+
+  devTools: process.env.REACT_APP_ENV === "development",
 });
 
 export type AppDispatch = typeof store.dispatch;
