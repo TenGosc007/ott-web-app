@@ -36,43 +36,47 @@ const moviesSlice = createSlice({
 
 export const { setMovies, setCurrentMovie } = moviesSlice.actions;
 
-export const getMovies = (): AppThunk => async (dispatch) => {
-  try {
-    const { data } = await axios.post(
-      "/Media/GetMediaList",
-      {
-        MediaListId: 3,
-        IncludeCategories: false,
-        IncludeImages: true,
-        IncludeMedia: false,
-        PageNumber: 1,
-        PageSize: 15,
-      },
-      {
-        headers: {
-          Authorization: localStorage.getItem("token"),
+export const getMovies =
+  (mediaId: number): AppThunk =>
+  async (dispatch) => {
+    try {
+      const { data } = await axios.post(
+        "/Media/GetMediaList",
+        {
+          MediaListId: mediaId,
+          IncludeCategories: false,
+          IncludeImages: true,
+          IncludeMedia: false,
+          PageNumber: 1,
+          PageSize: 15,
         },
-      }
-    );
+        {
+          headers: {
+            Authorization: localStorage.getItem("token"),
+          },
+        }
+      );
 
-    const { Entities } = data;
-    let moviesArr: Movie[] = [];
+      const { Entities } = data;
+      let moviesArr: Movie[] = [];
 
-    Entities.forEach((e: any) => {
-      const image = e.Images.find((img: any) => img.ImageTypeCode === "FRAME");
-      moviesArr.push({
-        id: e.Id,
-        title: e.Title,
-        img: image?.Url,
-        description: e?.Description,
+      Entities.forEach((e: any) => {
+        const image = e.Images.find(
+          (img: any) => img.ImageTypeCode === "FRAME"
+        );
+        moviesArr.push({
+          id: e.Id,
+          title: e.Title,
+          img: image?.Url,
+          description: e?.Description,
+        });
       });
-    });
 
-    dispatch(setMovies(moviesArr));
-  } catch (err) {
-    console.log(err);
-  }
-};
+      dispatch(setMovies(moviesArr));
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
 export const getMovieUrl =
   (movieId: number): AppThunk =>

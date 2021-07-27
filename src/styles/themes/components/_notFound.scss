@@ -1,0 +1,26 @@
+.not-found {
+  font-size: $space-large;
+  transform: translateY(10vh);
+
+  h2 {
+    margin-bottom: $space-standard;
+  }
+
+  p {
+    margin: 0;
+    margin-bottom: $space-medium;
+    font-size: $space-xx-large;
+    font-weight: 500;
+    color: $c-persimmon;
+    text-shadow: 2px 2px 2px rgba($c-mineShaft, 0.4);
+  }
+
+  &__link {
+    font-size: 1rem;
+
+    &:hover,
+    &:active {
+      color: tomato;
+    }
+  }
+}

@@ -2,3 +2,22 @@
 @function pxToRem($pxsize, $rembase: 16) {
   @return ($pxsize / $rembase) + rem;
 }
+
+@mixin scrollbar(
+  $scrollSize: 4px,
+  $backgroundTrack: #b9b9b9,
+  $backgroundThumb: #696969,
+  $scrollRadius: 0px
+) {
+  scrollbar-width: thin;
+  &::-webkit-scrollbar {
+    width: $scrollSize;
+  }
+  &::-webkit-scrollbar-track {
+    background: $backgroundTrack;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $backgroundThumb;
+    border-radius: $scrollRadius;
+  }
+}

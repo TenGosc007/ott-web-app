@@ -1,4 +1,8 @@
 .layout {
   text-align: center;
-  padding: 2rem;
+  padding: $space-large;
+
+  @media (max-width: $break-mobile-portrait) {
+    padding: $space-small;
+  }
 }

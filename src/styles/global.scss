@@ -13,6 +13,8 @@ body {
   background-color: $c-white;
   color: $c-black;
   overflow: auto;
+  position: relative;
+  height: 100vh;
 }
 
 img,
