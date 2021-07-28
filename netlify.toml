@@ -1,9 +1,10 @@
-# The following redirect is intended for use with most SPAs that handle
-# routing internally.
 [[redirects]]
   from = "/*"
-  to = "/index.html"
+  to = "https://thebetter.bsgroup.eu"
   status = 200
+  force = true
+  signed = "API_SIGNATURE_TOKEN"
+
 
 [[headers]]
   # Define which paths this specific [[headers]] block will cover.
