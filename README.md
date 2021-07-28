@@ -29,6 +29,7 @@ Project is created with:
 - SASS
 - Node.js
 - React
+- ReactPlayer
 - Redux-Toolkit
 
 ### Requirements
