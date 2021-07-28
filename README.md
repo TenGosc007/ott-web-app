@@ -1,44 +1,72 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+# OTT Player
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [General Info](#generalinfo)
+- [Technologies](#technologies)
+- [Requirements](#requirements)
+- [Setup](#setup)
+- [Demo](#demo)
 
-### `yarn start`
+### General Info
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+The OTT web application names **_OTT Player_** containing video content with the option of
+playback. Enjoy a wide library of high-quality movies whether you are using a computer, tablet or phone. Check it now!
 
-### `yarn test`
+![OTT Player](./src/assets/Screenshot.png?raw=true "Title")
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**If you don't want to run the project locally, you do not have to read anything more, just visit the <a href="https://ottplayer.netlify.app">site!</a>**
 
-### `yarn build`
+### Technologies
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Project is created with:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- TypeScript
+- SASS
+- Node.js
+- React
+- ReactPlayer
+- Redux-Toolkit
 
-### `yarn eject`
+### Requirements
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+---
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To be able to run the project locally, you need to have installed **yarn package manager**
+If you do not know if you have it installed on your computer and you still want to run our project follow these steps:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+#### Windows command prompt/Linux bash
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+##### Run _npm -v_
 
-## Learn More
+- _If you received a number like 'x.x.x' you already have installed_ **npm package manager** \*on your computer and you can follow the next part, which is installing **yarn**
+- \*Otherwise, you will have to install it, the best way to do it is installing it globaly by running the command **npm install npm@latest -g\***
+- _After that you can run again the command from the first line just to confirm that you have succesfully installed required_ **package manager**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+##### Install yarn
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- _To install yarn_ **package manager (faster vesrion of npm)** \*run the commnad **npm install --global yarn\***
+- \*confirm yarn install by tpying command **yarn --version\***
+
+### Setup
+
+---
+
+- Run command **yarn** to install all node modules
+- Run command **yarn start** or **yarn dev** (with access to redux toolkit )
+- Enter the local host that was created which should be at **<a href="http://localhost:3000">localhost:3000</a>**
+- **_You can now use the fully functional application!_\***
+
+### Demo
+
+---
+
+A working demo has been placed on the Netlify platform.
+**Check it out <a href="https://ottplayer.netlify.app">ottplayer.netlify.app</a>**
+
+There is a problem with the header "Access-Control-Allow-Origin". For the page to connect to the backend, it uses a heroku proxy.
+**If you are launching the website for the first time, visit this <a href="https://cors-anywhere.herokuapp.com/corsdemo">page</a> first and click the button "Request temporary access to the demo server"**
