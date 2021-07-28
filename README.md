@@ -17,7 +17,7 @@ playback. Enjoy a wide library of high-quality movies whether you are using a co
 
 ![OTT Player](./src/assets/Screenshot.png?raw=true "Title")
 
-**If you don't want to run our project locally, you do not have to read anything more, just visit the <a href="https://managementsystem2021.netlify.app/">site!</a>**
+**If you don't want to run the project locally, you do not have to read anything more, just visit the <a href="https://managementsystem2021.netlify.app/">site!</a>**
 
 ### Technologies
 
@@ -35,7 +35,7 @@ Project is created with:
 
 ---
 
-To be able to run our project locally, you need to have installed **yarn package manager**
+To be able to run the project locally, you need to have installed **yarn package manager**
 If you do not know if you have it installed on your computer and you still want to run our project follow these steps:
 
 #### Windows command prompt/Linux bash
@@ -58,7 +58,7 @@ If you do not know if you have it installed on your computer and you still want 
 - Run command **yarn** to install all node modules
 - Run command **yarn start** or **yarn dev** (with access to redux toolkit )
 - Enter the local host that was created which should be at **<a href="http://localhost:3000">localhost:3000</a>**
-- **_You can now use our fully functional application!_\***
+- **_You can now use the fully functional application!_\***
 
 ### Demo
 
