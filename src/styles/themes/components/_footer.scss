@@ -3,10 +3,12 @@
   background: $c-mineShaft;
   width: 100%;
   box-shadow: 0 -2px 10px rgba($c-mineShaft, 0.5);
+  max-width: 1500px;
+  margin: $space-large auto 0;
 
   h5 {
     margin: 0;
-    padding: $space-standard;
+    padding: $space-medium;
     text-align: center;
   }
 }

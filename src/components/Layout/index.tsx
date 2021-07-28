@@ -16,8 +16,10 @@ const Layout = ({ title = "", children }: Props) => {
         <title>OTT Player {title && `| ${title}`}</title>
       </Helmet>
       <Header />
-      <main className="layout">{children}</main>
-      <Footer />
+      <main className="layout">
+        {children}
+        <Footer />
+      </main>
     </>
   );
 };
