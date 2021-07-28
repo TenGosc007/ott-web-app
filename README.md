@@ -17,7 +17,7 @@ playback. Enjoy a wide library of high-quality movies whether you are using a co
 
 ![OTT Player](./src/assets/Screenshot.png?raw=true "Title")
 
-**If you don't want to run the project locally, you do not have to read anything more, just visit the <a href="https://managementsystem2021.netlify.app/">site!</a>**
+**If you don't want to run the project locally, you do not have to read anything more, just visit the <a href="https://ottplayer.netlify.app">site!</a>**
 
 ### Technologies
 
@@ -65,7 +65,7 @@ If you do not know if you have it installed on your computer and you still want 
 ---
 
 A working demo has been placed on the Netlify platform.
-**Check it out <a href="https://managementsystem2021.netlify.app/">managementsystem2021.netlify.app</a>**
+**Check it out <a href="https://ottplayer.netlify.app">ottplayer.netlify.app</a>**
 
 There is a problem with the header "Access-Control-Allow-Origin". For the page to connect to the backend, it uses a heroku proxy.
 **If you are launching the website for the first time, visit this <a href="https://cors-anywhere.herokuapp.com/corsdemo">page</a> first and click the button "Request temporary access to the demo server"**
