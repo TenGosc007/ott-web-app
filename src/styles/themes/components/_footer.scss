@@ -1,18 +1,12 @@
 .footer {
   color: $c-gallery;
   background: $c-mineShaft;
-  position: absolute;
   width: 100%;
-  bottom: 0;
   box-shadow: 0 -2px 10px rgba($c-mineShaft, 0.5);
 
   h5 {
     margin: 0;
     padding: $space-standard;
     text-align: center;
-  }
-
-  @media (max-width: $break-tablet-landscape) {
-    position: static;
   }
 }

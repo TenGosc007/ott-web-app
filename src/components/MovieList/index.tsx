@@ -42,11 +42,24 @@ const MovieList = ({ listId }: Props) => {
             key={movie.id}
             onClick={() => handleClick(movie.id)}
           >
-            <img
-              className="movie-list__img"
-              src={movie.img ?? imgPlaceholder}
-              alt="cover"
-            />
+            <div className="movie-list__rotate">
+              <img
+                className="movie-list__img"
+                src={movie.img ?? imgPlaceholder}
+                alt="cover"
+              />
+              <div className="movie-list__description">
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Reprehenderit eos velit magnam temporibus nihil laboriosam
+                  distinctio dignissimos perferendis necessitatibus eum. Neque
+                  doloremque est veniam tenetur in. Doloribus reprehenderit
+                  nesciunt amet consequatur esse! Fugit, numquam iure incidunt
+                  possimus harum est sit doloremque excepturi repudiandae esse
+                  doloribus. Laboriosam rerum nobis maxime assumenda!
+                </p>
+              </div>
+            </div>
             <h4 className="movie-list__title"> {movie.title}</h4>
           </li>
         ))}

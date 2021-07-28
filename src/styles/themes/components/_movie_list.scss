@@ -43,9 +43,36 @@
     }
   }
 
+  &__rotate {
+    position: relative;
+    flex: 1;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
   &__img {
-    width: 50%;
+    width: 100%;
     height: auto;
+  }
+
+  &__description {
+    margin: 0;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    box-sizing: border-box;
+
+    p {
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      margin: 0;
+      padding: $space-x-small 0 0 $space-x-small;
+      box-sizing: border-box;
+    }
   }
 
   &__title {
