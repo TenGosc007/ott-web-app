@@ -12,6 +12,7 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  overflow: hidden;
 
   &__title {
     background-color: rgba($c-mineShaft, 0.1);
@@ -43,17 +44,65 @@
     align-items: center;
     justify-content: center;
     gap: $space-x-small;
-    font-size: $space-medium;
+    font-size: 1.3rem;
     max-width: 400px;
     margin: auto;
+    padding: 0 $space-small;
+    animation: show 0.5s 0.5s backwards ease;
 
     &::before,
     &::after {
       content: "";
       display: block;
       height: 1px;
-      width: 50%;
+      width: 100%;
       background-color: $c-mineShaft;
+      animation: slide 0.5s 0.8s backwards ease;
     }
+
+    &::before {
+      transform-origin: left;
+    }
+
+    &::after {
+      transform-origin: right;
+    }
+  }
+
+  @media (max-width: $break-mobile-portrait) {
+    font-size: $space-small;
+    padding-bottom: $space-standard;
+
+    &__title {
+      margin-bottom: $space-medium;
+    }
+
+    &__header {
+      font-size: $space-medium;
+    }
+
+    &__subtitle {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@keyframes show {
+  from {
+    transform: scale(0.2);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slide {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
   }
 }

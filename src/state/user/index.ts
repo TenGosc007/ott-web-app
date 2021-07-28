@@ -14,12 +14,14 @@ interface State {
   authenticated: boolean;
   userData: UserData | null;
   loading: boolean;
+  error: string | null;
 }
 
 const initialState: State = {
   authenticated: false,
   userData: null,
   loading: false,
+  error: null,
 };
 
 const userSlice = createSlice({
@@ -35,11 +37,13 @@ const userSlice = createSlice({
       state.authenticated = true;
       state.userData = action.payload;
       state.loading = false;
+      state.error = null;
     },
-    loginFailed: (state) => {
+    loginFailed: (state, action) => {
       state.authenticated = false;
       state.userData = null;
       state.loading = false;
+      state.error = action.payload;
     },
     logout: (state) => {
       localStorage.clear();
@@ -61,7 +65,7 @@ export const loginUserFetch =
       localStorage.setItem("token", data.AuthorizationToken.Token);
     } catch (error) {
       localStorage.clear();
-      dispatch(loginFailed());
+      dispatch(loginFailed(error.response.data.Message));
     }
   };
 
@@ -100,5 +104,6 @@ export const { login, loginSuccess, loginFailed, logout } = userSlice.actions;
 export const selectAuth = (state: RootState) => state.user.authenticated;
 export const selectData = (state: RootState) => state.user.userData;
 export const selectLoading = (state: RootState) => state.user.loading;
+export const selectError = (state: RootState) => state.user.error;
 
 export default userSlice.reducer;

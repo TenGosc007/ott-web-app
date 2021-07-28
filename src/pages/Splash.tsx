@@ -2,13 +2,15 @@ import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-import { selectAuth } from "state/user";
+import { selectAuth, selectLoading } from "state/user";
 import Layout from "components/Layout";
 import Login from "components/Login";
 import Form from "components/Form";
+import Spinner from "components/Spinner";
 
 const Splash = () => {
   const auth = useSelector(selectAuth);
+  const loading = useSelector(selectLoading);
   const history = useHistory();
 
   useEffect(() => {
@@ -19,6 +21,7 @@ const Splash = () => {
 
   return (
     <Layout title="Login">
+      {loading && <Spinner />}
       <div className="splash">
         <div className="splash__title">
           <h1 className="splash__header">Welcome to OTT Player</h1>
@@ -27,7 +30,7 @@ const Splash = () => {
 
         <div className="splash__login-area">
           <Login />
-          <div className="splash__separator">or</div>
+          <div className="splash__separator">OR</div>
           <Form />
         </div>
       </div>

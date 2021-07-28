@@ -2,13 +2,20 @@ import React, { useEffect, useState } from "react";
 import ReactPlayer from "react-player";
 import { useSelector } from "react-redux";
 
-import { selectCurrent, selectMovies, Movie } from "state/movies";
+import {
+  selectCurrent,
+  selectMovies,
+  Movie,
+  selectLoading,
+} from "state/movies";
+import Spinner from "components/Spinner";
 
 import imgPlaceholder from "assets/movie-placeholder.png";
 
 const Player = () => {
   const [movie, setMovie] = useState<Movie>();
   const currentMovie = useSelector(selectCurrent);
+  const loading = useSelector(selectLoading);
   const movies = useSelector(selectMovies);
 
   useEffect(() => {
@@ -21,6 +28,7 @@ const Player = () => {
   return (
     <div className="player">
       <div className="player__container">
+        {loading && <Spinner />}
         {currentMovie ? (
           <ReactPlayer
             className="player__window"
@@ -39,7 +47,10 @@ const Player = () => {
         )}
       </div>
       <div className="player__info">
-        <div className="player__title">{movie?.title ?? "Title"}</div>
+        <div className="player__header">
+          <div className="player__title">{movie?.title ?? "Title"}</div>
+          <div className="player__date">{movie?.date}</div>
+        </div>
         <div className="player__description">
           {movie?.description ?? "Description"}
         </div>

@@ -6,6 +6,7 @@
   &__container {
     background: url("../../../assets/movie-placeholder.png") no-repeat cover;
     height: fit-content;
+    position: relative;
   }
 
   &__window {
@@ -17,6 +18,16 @@
     margin: $space-small $space-standard;
   }
 
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__date {
+    font-size: $space-standard;
+  }
+
   &__title {
     font-size: $space-large;
     font-weight: 500;
@@ -24,5 +35,16 @@
 
   &__description {
     margin-top: $space-small;
+    text-align: justify;
+  }
+
+  @media (max-width: $break-mobile-portrait) {
+    &__title {
+      font-size: $space-medium;
+    }
+
+    &__description {
+      font-size: $space-small;
+    }
   }
 }

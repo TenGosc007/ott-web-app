@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import axios from "axios/myAxios";
+import moment from "moment";
 
 import { RootState, AppThunk } from "state/store";
 
@@ -8,6 +9,7 @@ export interface Movie {
   title: string;
   img?: string;
   description?: string;
+  date?: string;
 }
 
 export interface CurrentMovie {
@@ -77,11 +79,13 @@ export const getMovies =
         const image = e.Images.find(
           (img: any) => img.ImageTypeCode === "FRAME"
         );
+
         moviesArr.push({
           id: e.Id,
           title: e.Title,
           img: image?.Url,
           description: e?.Description,
+          date: moment(e.AvailableFrom).format("MMM Do YY"),
         });
       });
 

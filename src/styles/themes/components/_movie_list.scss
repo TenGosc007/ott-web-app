@@ -9,6 +9,7 @@
   box-sizing: border-box;
   max-height: 80vh;
   overflow-y: scroll;
+  position: relative;
 
   @include scrollbar();
 
@@ -34,11 +35,11 @@
 
     &:hover,
     &:active {
-      background: rgba($c-persimmon, 0.9);
+      background: rgba($c-persimmon, 0.2);
     }
 
     &:active {
-      background: $c-persimmon;
+      background: rgba($c-persimmon, 0.6);
     }
   }
 
@@ -53,6 +54,10 @@
     height: 100%;
     text-overflow: ellipsis;
   }
+}
+
+.select {
+  background-color: rgba($c-persimmon, 0.6);
 }
 
 @media (max-width: $break-mobile-landscape) {
