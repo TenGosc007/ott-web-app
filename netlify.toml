@@ -1,0 +1,13 @@
+[[redirects]]
+  from = "/*"
+  to = "https://thebetter.bsgroup.eu"
+  status = 200
+  force = true
+  signed = "API_SIGNATURE_TOKEN"
+
+
+[[headers]]
+  # Define which paths this specific [[headers]] block will cover.
+  for = "/*"
+    [headers.values]
+    Access-Control-Allow-Origin = "*"
