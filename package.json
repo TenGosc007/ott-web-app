@@ -2,6 +2,7 @@
   "name": "react-platform-task-1",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://thebetter.bsgroup.eu",
   "dependencies": {
     "@reduxjs/toolkit": "^1.5.1",
     "@testing-library/jest-dom": "^4.2.4",
