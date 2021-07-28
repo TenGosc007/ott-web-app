@@ -1,5 +1,5 @@
 import React from "react";
-// import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 import Footer from "components/Footer";
 import Header from "components/Header";
@@ -12,9 +12,9 @@ interface Props {
 const Layout = ({ title = "", children }: Props) => {
   return (
     <>
-      {/* <Helmet>
+      <Helmet>
         <title>OTT Player {title && `| ${title}`}</title>
-      </Helmet> */}
+      </Helmet>
       <Header />
       <main className="layout">{children}</main>
       <Footer />

@@ -6,7 +6,7 @@ import MovieList from "components/MovieList";
 
 const Home = () => {
   return (
-    <Layout>
+    <Layout title="Home">
       <div className="home">
         <Player />
         <MovieList listId={2} />

@@ -13,8 +13,8 @@ const Login = () => {
     dispatch(loginUserFetch({}));
   };
   return (
-    <Link to="/" className="login__btn" onClick={handleClick}>
-      Login
+    <Link to="/" className="login" onClick={handleClick}>
+      continue as anonymous user
     </Link>
   );
 };

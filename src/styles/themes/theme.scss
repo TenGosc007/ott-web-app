@@ -5,8 +5,10 @@
 
 // import components styles
 @import "./components/footer";
+@import "./components/form";
 @import "./components/header";
 @import "./components/layout";
+@import "./components/login";
 @import "./components/logout";
 @import "./components/movie_list";
 @import "./components/notFound";
@@ -14,4 +16,4 @@
 
 // import pages styles
 @import "./pages/home";
-@import "./pages/login";
+@import "./pages/splash";

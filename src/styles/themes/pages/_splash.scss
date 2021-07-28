@@ -1,0 +1,59 @@
+.splash {
+  text-align: center;
+  padding-bottom: $space-x-large;
+  box-sizing: border-box;
+  color: $c-mineShaft;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.6),
+      rgba($color-primary-dark, 0.7)
+    ),
+    url("../../../assets/pexels-skitterphoto-390089.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__title {
+    background-color: rgba($c-mineShaft, 0.1);
+    padding: $space-large 0 $space-x-small;
+    padding-top: $space-large;
+    margin-bottom: $space-x-large;
+  }
+
+  &__header {
+    padding: 0;
+    margin: 0;
+    font-size: $space-x-large;
+    width: 100%;
+  }
+
+  &__subtitle {
+    font-size: $space-medium;
+    font-size: 500;
+  }
+
+  &__btn {
+    border: 1px solid #333;
+    border-radius: 3px;
+    padding: 0.4rem 0.6rem;
+  }
+
+  &__separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $space-x-small;
+    font-size: $space-medium;
+    max-width: 400px;
+    margin: auto;
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      height: 1px;
+      width: 50%;
+      background-color: $c-mineShaft;
+    }
+  }
+}

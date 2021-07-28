@@ -1,0 +1,22 @@
+.login {
+  border: 1px solid #333;
+  border-radius: 3px;
+  padding: $space-x-small $space-standard;
+  display: block;
+  width: fit-content;
+  font-weight: 500;
+  margin: $space-medium auto;
+  background-color: rgba($c-white, 0.3);
+  transition: all 0.2s ease;
+  box-shadow: 2px 2px 10px rgba($c-mineShaft, 0.1);
+
+  &:hover,
+  &:active {
+    background-color: $c-mineShaft;
+    color: $c-white;
+  }
+
+  &:active {
+    transform: translateY(2px);
+  }
+}
