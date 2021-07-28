@@ -5,10 +5,19 @@
   box-shadow: 0 -2px 10px rgba($c-mineShaft, 0.5);
   max-width: 1500px;
   margin: $space-large auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   h5 {
     margin: 0;
     padding: $space-medium;
     text-align: center;
+  }
+
+  img {
+    width: $space-medium;
+    filter: invert(90%);
+    cursor: pointer;
   }
 }

@@ -14,7 +14,6 @@ const Form = () => {
 
   const handleSubmit = (e: Esubmit) => {
     e.preventDefault();
-    console.log("xd");
     dispatch(loginUserFetch({ Username: name, Password: password }));
   };
 
