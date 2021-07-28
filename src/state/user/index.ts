@@ -65,7 +65,7 @@ export const loginUserFetch =
       localStorage.setItem("token", data.AuthorizationToken.Token);
     } catch (error) {
       localStorage.clear();
-      dispatch(loginFailed(error.response.data.Message));
+      if (error.response) dispatch(loginFailed(error.response.data.Message));
     }
   };
 
