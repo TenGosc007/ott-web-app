@@ -18,7 +18,7 @@ function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    ReactGA.initialize("UA-2808014912-1");
+    ReactGA.initialize("UA-208230920-1");
     ReactGA.pageview(window.location.pathname + window.location.search);
   }, []);
 
