@@ -18,11 +18,7 @@ function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    ReactGA.initialize("UA-208236103-1", {
-      gaOptions: {
-        siteSpeedSampleRate: 100,
-      },
-    });
+    ReactGA.initialize("UA-2808014912-1");
     ReactGA.pageview(window.location.pathname + window.location.search);
   }, []);
 
