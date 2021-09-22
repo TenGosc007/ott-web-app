@@ -1,12 +1,3 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import { Provider } from "react-redux";
-import { HelmetProvider } from "react-helmet-async";
-
-import store from "state/store";
-import App from "./App";
-import "styles/themes/theme.scss";
-
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
@@ -28,14 +19,3 @@ export const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
-
-ReactDOM.render(
-  <React.StrictMode>
-    <HelmetProvider>
-      <Provider store={store}>
-        <App />
-      </Provider>
-    </HelmetProvider>
-  </React.StrictMode>,
-  document.getElementById("root")
-);
