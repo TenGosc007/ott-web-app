@@ -18,7 +18,7 @@ function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    ReactGA.initialize("G-ER07HH4QSP", {
+    ReactGA.initialize("UA-208236103-1", {
       gaOptions: {
         siteSpeedSampleRate: 100,
       },
