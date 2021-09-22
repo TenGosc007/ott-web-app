@@ -18,7 +18,11 @@ function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    ReactGA.initialize("G-ER07HH4QSP");
+    ReactGA.initialize("G-ER07HH4QSP", {
+      gaOptions: {
+        siteSpeedSampleRate: 100,
+      },
+    });
     ReactGA.pageview(window.location.pathname + window.location.search);
   }, []);
 
