@@ -9,7 +9,7 @@ const Home = () => {
   const analytics = getAnalytics();
 
   useEffect(() => {
-    logEvent(analytics, "homepage_visited");
+    logEvent(analytics, "page_view");
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
