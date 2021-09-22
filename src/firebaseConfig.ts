@@ -7,8 +7,8 @@ export const firebaseConfig = initializeApp({
   projectId: "ottplayer-f9a6f",
   storageBucket: "ottplayer-f9a6f.appspot.com",
   messagingSenderId: "272231227205",
-  appId: "1:272231227205:web:e05ef7523670b737b6e82c",
-  measurementId: "G-ER07HH4QSP",
+  appId: "1:272231227205:web:867017a31865aeddb6e82c",
+  measurementId: "G-RR9HS3SZL3",
 });
 
 export const analytics = getAnalytics(firebaseConfig);

@@ -6,17 +6,21 @@ import {
   Redirect,
 } from "react-router-dom";
 import { useDispatch } from "react-redux";
+import { logEvent } from "firebase/analytics";
 
 import { authUser, logout } from "state/user";
 import { PrivateRoute } from "helpers/PrivateRoute";
 import Home from "pages/Home";
 import Splash from "pages/Splash";
 import NotFound from "components/NotFound";
+import { analytics } from "firebaseConfig";
 
 function App() {
   const dispatch = useDispatch();
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    logEvent(analytics, "page_view");
+  }, []);
 
   useEffect(() => {
     if (localStorage.getItem("token")) {
