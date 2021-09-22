@@ -2,13 +2,13 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 
 export const firebaseConfig = initializeApp({
-  apiKey: "AIzaSyCk9VUnBVTWGH17_3HhHyA8mGpHxEfK7TQ",
-  authDomain: "ottplayer-f9a6f.firebaseapp.com",
-  projectId: "ottplayer-f9a6f",
-  storageBucket: "ottplayer-f9a6f.appspot.com",
-  messagingSenderId: "272231227205",
-  appId: "1:272231227205:web:867017a31865aeddb6e82c",
-  measurementId: "G-RR9HS3SZL3",
+  apiKey: "AIzaSyAnx2BfYmNmui6lyv8xgJNptw7DD_KBFSI",
+  authDomain: "ottappv2.firebaseapp.com",
+  projectId: "ottappv2",
+  storageBucket: "ottappv2.appspot.com",
+  messagingSenderId: "286920388061",
+  appId: "1:286920388061:web:cbe1444d074f87d73fda34",
+  measurementId: "G-43JEX2WRNV",
 });
 
 export const analytics = getAnalytics(firebaseConfig);
