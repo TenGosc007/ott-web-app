@@ -6,6 +6,7 @@ import {
   Redirect,
 } from "react-router-dom";
 import { useDispatch } from "react-redux";
+import ReactGA from "react-ga";
 
 import { authUser, logout } from "state/user";
 import { PrivateRoute } from "helpers/PrivateRoute";
@@ -15,6 +16,11 @@ import NotFound from "components/NotFound";
 
 function App() {
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    ReactGA.initialize("G-HE9K1HT63C");
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
 
   useEffect(() => {
     if (localStorage.getItem("token")) {
