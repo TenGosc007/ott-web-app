@@ -6,6 +6,7 @@ import { HelmetProvider } from "react-helmet-async";
 import store from "state/store";
 import App from "./App";
 import "styles/themes/theme.scss";
+import "firebaseConfig";
 
 ReactDOM.render(
   <React.StrictMode>

@@ -1,9 +1,14 @@
-export const firebaseConfig = {
-  apiKey: "AIzaSyDXMkQk-WtHG7zGwp6E47YGBcEZ8OH7hbY",
-  authDomain: "ott-player-a0350.firebaseapp.com",
-  projectId: "ott-player-a0350",
-  storageBucket: "ott-player-a0350.appspot.com",
-  messagingSenderId: "335218900895",
-  appId: "1:335218900895:web:017738a8b1541460d387aa",
-  measurementId: "G-HE9K1HT63C",
-};
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+
+export const firebaseConfig = initializeApp({
+  apiKey: "AIzaSyCk9VUnBVTWGH17_3HhHyA8mGpHxEfK7TQ",
+  authDomain: "ottplayer-f9a6f.firebaseapp.com",
+  projectId: "ottplayer-f9a6f",
+  storageBucket: "ottplayer-f9a6f.appspot.com",
+  messagingSenderId: "272231227205",
+  appId: "1:272231227205:web:e05ef7523670b737b6e82c",
+  measurementId: "G-ER07HH4QSP",
+});
+
+export const analytics = getAnalytics(firebaseConfig);
