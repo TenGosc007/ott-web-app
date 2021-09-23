@@ -6,7 +6,7 @@ import {
   Redirect,
 } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { logEvent, getAnalytics } from "firebase/analytics";
+// import { logEvent, getAnalytics } from "firebase/analytics";
 
 import { authUser, logout } from "state/user";
 import { PrivateRoute } from "helpers/PrivateRoute";
@@ -17,10 +17,10 @@ import NotFound from "components/NotFound";
 function App() {
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    const analytics = getAnalytics();
-    logEvent(analytics, "page_view");
-  }, []);
+  // useEffect(() => {
+  //   const analytics = getAnalytics();
+  //   logEvent(analytics, "page_view");
+  // }, []);
 
   useEffect(() => {
     if (localStorage.getItem("token")) {
